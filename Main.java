@@ -5,28 +5,26 @@ public class Main {
 	public static void main(String[] args) {
 		try (// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in)) {
-			Prodotto[] elencoProdotti;
-			System.out.println("Inserisci il n di prodotti");
+			Elem[] listElem;
+			System.out.println("How many elements?");
 			int dim = in.nextInt();
 			
-			elencoProdotti = new Prodotto[dim];
+			listElem = new Elem[dim];
 			
-			for(int i = 0; i < elencoProdotti.length; i++) {
-				System.out.print("ID: ");
-				int id = in.nextInt();
+			for(int i = 0; i < listElem.length; i++) {
+				System.out.print("Name: ");
+				String name = in.next();
 			
-				System.out.print("Descrizione: ");
+				System.out.print("Descruitpion: ");
 				String desc = in.next();
 		
 				System.out.print("Price:");
 				int price = in.nextInt();
 				
-				elencoProdotti[i] = new Prodotto(id, desc, price);
+				listElem[i] = new Elem(name, desc, price);
 			}
 			
-			for(int i = 0; i < elencoProdotti.length; i++) {
-				System.out.println("CDE:"+elencoProdotti[i].getId()+" Descrizione: "+elencoProdotti[i].getDesc()+" Prezzo: "+elencoProdotti[i].getPrezzo());
-			}
+	
 		}
 
 	}
